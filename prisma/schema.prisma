@@ -14,7 +14,7 @@ datasource db {
 }
 
 model Session {
-  id            String    @id @default(auto()) @map("_id") // Use _id as the identifier
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId // Use _id as the identifier
   shop          String
   state         String
   isOnline      Boolean   @default(false)
